@@ -32,5 +32,13 @@ describe Game do
         expect(score).to eq(16)
       end
     end
+
+    context 'when a strike is thrown' do
+      let(:frame_history) { [ [10,nil], [3, 4] ]}
+
+      it 'should add the next two throws' do
+        expect(score).to eq(24)
+      end
+    end
   end
 end
